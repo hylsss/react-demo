@@ -1,25 +1,27 @@
 // src/components/Home.js
 import React from 'react';
 
-class Home extends React.Component{
-    //数据绑定
-    constructor(props){
-        super(props);
-        this.state = {
-            name: "react",
-            info: {
-                type: "test",
-                componentName: "home test"
-            }
-        }
-    }
-    render(){
-        return (
-            <div>
-               {this.state.name}-- {this.state.info.type}
-            </div>
-        )
-    }
-}
-
-export default Home;
+// 函数创建组件
+// function testComponent() {
+//     let name = 'SIII';
+//     let list = ['Ins', 'Ivy', 'Hedy']
+//     return (
+//         <div>
+//             {name}
+//             <ul>
+//                 {list.map((item, index) => <li key={index}>{item}</li>)}
+//             </ul>
+//         </div>
+//     )
+// }
+let name = 'SIII';
+let list = ['Ins', 'Ivy', 'Hedy']
+// 箭头函数创建组件
+const testComponent = () => 
+<div>
+    {name}
+    <ul>
+        {list.map((item, index) => <li key={index}>{item}</li>)}
+    </ul>
+</div>
+export default testComponent;
