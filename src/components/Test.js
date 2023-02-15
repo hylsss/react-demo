@@ -1,5 +1,6 @@
 import React from 'react'
 
+// 类组件创建
 class Test extends React.Component{
     /*
      数据绑定
@@ -16,6 +17,9 @@ class Test extends React.Component{
             list:['Ins','Ivy','Hedy']
         }
     }
+    clickFun() {
+        console.log('绑定点击事件');
+    }
     render(){
         return (
             <div>
@@ -24,6 +28,7 @@ class Test extends React.Component{
                <ul>
                {this.state.list.map((item,index)=><li key ={index}>{item}</li> )}
                </ul>
+               <button onClick={this.clickFun}>点击事件</button>
             </div>
         )
     }
